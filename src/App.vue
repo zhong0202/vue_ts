@@ -1,32 +1,27 @@
+<!--
+ * @Author: zhongao 1417512076@qq.com
+ * @Date: 2022-06-11 21:16:51
+ * @LastEditors: zhongao 1417512076@qq.com
+ * @LastEditTime: 2022-06-15 07:50:50
+ * @FilePath: \vue_ts\src\App.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <div>{{ a }}</div>
+    <router-view />
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script lang='ts'>
+import Vue from 'vue'
+import Component from 'vue-class-component'
+@Component
+export default class App extends Vue {
+  a = 1
+  b = 3
+  test () {
+    console.log(this.a.c)
   }
 }
-</style>
+</script>
+<style lang="scss" scoped></style>
